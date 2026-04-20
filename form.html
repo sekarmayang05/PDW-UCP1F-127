@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2>Form Pendaftaran Anggota</h2>
+        <form id="registrationForm">
+            <div class="mb-3">
+                <label class="form-label">Nama Lengkap</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Bidang Minat</label>
+                <select id="interest" class="form-select">
+                    <option value="Web Development">Web Development</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Data Science">Jaringan</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Daftar Sekarang</button>
+            <a href="./index.html" class="btn btn-secondary">Kembali</a>
+        </form>
+        <div id="resultDisplay" class="mt-4 p-3 bg-white border d-none">
+            <h5>Hasil Input Terakhir:</h5>
+            <p id="resultText"></p>
+        </div>
+    </div>
+</div>
+<script src="./script.js"></script>
