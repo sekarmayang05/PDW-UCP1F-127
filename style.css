@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+:root {
+    --primary-gradient: linear-gradient(90deg, #0d6efd, #0dcaf0);
+    --dark-color: #212529;
+    --soft-bg: #f0f2f5;
+    --text-main: #334155;
+    --white: #ffffff;
+}
+
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--soft-bg);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+
+.text-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+
+.navbar {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+
+.card {
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background-color: var(--white);
+    overflow: hidden; 
+}
+
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+iframe, .carousel-item img {
+    border-radius: 15px;
+    border: 3px solid var(--white);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+
+.carousel-item img {
+    object-fit: cover;
+    background-color: #e2e8f0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+
+
+.form-control, .form-select {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 600;
+    transition: transform 0.2s active;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+
+#resultDisplay {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@media (max-width: 768px) {
+    .text-gradient {
+        font-size: 1.8rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}
