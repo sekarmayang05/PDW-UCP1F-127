@@ -27,3 +27,18 @@ if (registrationForm) {
 }
 
 
+const loginForm = document.getElementById('loginForm');
+
+if (loginForm) {
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert("Login Admin Berhasil!");
+        
+        
+        const modalEl = document.getElementById('loginModal');
+        const modalInstance = bootstrap.Modal.getInstance(modalEl);
+        if (modalInstance) {
+            modalInstance.hide();
+        }
+    });
+}
